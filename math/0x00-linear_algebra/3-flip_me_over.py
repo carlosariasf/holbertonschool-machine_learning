@@ -5,15 +5,12 @@
 def matrix_transpose(matrix):
     " Shape of matrix "
     arr = []
-    j = 0
-    while j < len(matrix):
+    for j in range(len(matrix)):
+        if j >= len(matrix[0]):
+            break
         arr.append([])
         for i in range(len(matrix)):
-            if j >= len(matrix[i]):
-                arr.pop(len(arr) - 1)
-                return arr
             arr[j] += [matrix[i][j]]
             if i == len(matrix) - 1:
-                j += 1
                 break
     return arr
