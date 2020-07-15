@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 " Flip me over "
 
-import time
-
 
 def matrix_transpose(matrix):
     " Shape of matrix "
