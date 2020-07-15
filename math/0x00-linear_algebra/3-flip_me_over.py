@@ -4,13 +4,6 @@
 
 def matrix_transpose(matrix):
     " Shape of matrix "
-    arr = []
-    for j in range(len(matrix)):
-        if j >= len(matrix[0]):
-            break
-        arr.append([])
-        for i in range(len(matrix)):
-            arr[j] += [matrix[i][j]]
-            if i == len(matrix) - 1:
-                break
+    arr = [[matrix[j][i] for j in len(matrix)]
+           for i in range(len(matrix[0]))]
     return arr
