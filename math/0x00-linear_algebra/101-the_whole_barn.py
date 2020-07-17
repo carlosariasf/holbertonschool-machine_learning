@@ -15,6 +15,7 @@ def add_matrices(mat1, mat2):
 
 
 def recur(matrix):
+    " shape "
     if not isinstance(matrix, list):
         return []
     return [len(matrix)] + recur(matrix[0])
