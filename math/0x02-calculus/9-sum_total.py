@@ -4,7 +4,7 @@
 
 def summation_i_squared(n):
     ''' Sum function '''
-    if not isinstance(n, int):
+    if not isinstance(n, int) or n <= 0:
         return None
     return sum(map(sqrt, range(1, n + 1)))
 
