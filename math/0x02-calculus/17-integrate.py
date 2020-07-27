@@ -6,8 +6,11 @@ def poly_integral(poly, C=0):
     ''' integral function '''
     if not isinstance(poly, list) or len(poly) == 0 or not isinstance(C, int):
         return None
-    intl = [C] + list(map(type_n, [poly[x]/(x + 1) for x in range(len(poly))]))
-    return intl
+    elif poly == [0]:
+        return [C]
+    else:
+        return [C] + list(map(type_n,
+                              [poly[x]/(x + 1) for x in range(len(poly))]))
 
 
 def type_n(x):
